@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TasKManagementAPI.Data;
+using TasKManagementAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
+//register Auth Service
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
 
