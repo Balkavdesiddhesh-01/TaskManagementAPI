@@ -1,8 +1,10 @@
-﻿namespace TasKManagementAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TasKManagementAPI.Models
 {
     public class TaskItem
     {
-
+        [Key]
         public int Id { get; set; }
 
         public string Ttile { get; set; } = string.Empty;

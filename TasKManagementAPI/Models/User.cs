@@ -12,5 +12,6 @@
 
         // Nevigation Property
         public ICollection<TaskItem> Tasks { get; set; } = new List<TaskItem>();
+
     }
 }
